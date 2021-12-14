@@ -1,12 +1,16 @@
 .App {
   text-align: center;
 }
-
+body{
+  background: #9AE66E;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.addVegStyle{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
