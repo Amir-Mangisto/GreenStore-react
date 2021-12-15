@@ -15,7 +15,6 @@ class Can extends React.Component {
   ClickButton() {
     const inp = document.getElementById("inputIdCan");
     this.state.arrayOfCans.push(inp.value);
-    inp.value = " ";
     this.setState({ NameOfCan: inp.value });
   }
   render() {

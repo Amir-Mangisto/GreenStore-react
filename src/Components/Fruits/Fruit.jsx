@@ -15,7 +15,6 @@ class Fruit extends React.Component {
   ClickButton() {
     const inp = document.getElementById("inputIdFruit");
     this.state.arrayOfFruit.push(inp.value);
-    inp.value = " ";
     this.setState({ NameOfFruit: inp.value });
   }
   render() {

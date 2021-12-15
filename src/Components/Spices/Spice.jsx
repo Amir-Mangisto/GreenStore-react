@@ -15,7 +15,6 @@ class Spice extends React.Component {
   ClickButton() {
     const inp = document.getElementById("inputIddd");
     this.state.arrayOfSpice.push(inp.value);
-    inp.value = " ";
     this.setState({ NameOfSpice: inp.value });
   }
   render() {
