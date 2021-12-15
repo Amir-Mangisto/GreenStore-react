@@ -9,11 +9,9 @@ class Can extends React.Component {
   }
 
   TextStore(event) {
-    console.log(event.target.value);
-    this.setState({ text: event.target.value });
+    this.state.NameOfCan = event.target.value;
   }
   ClickButton() {
-    const inp = document.getElementById("inputIdCan");
     this.state.arrayOfCans.push(inp.value);
     this.setState({ NameOfCan: inp.value });
   }
@@ -24,7 +22,7 @@ class Can extends React.Component {
           THIS COMPONENT IS TO BE USED TO ADD <strong>SPICE</strong> TO THE
           STORE
         </h1>
-        <input id="inputIdCan" />
+        <input type="text" onChange={this.TextStore} />
         <button onClick={this.ClickButton}>Click Here</button>
         <p>{this.state.NameOfCan}</p>
         <ul>

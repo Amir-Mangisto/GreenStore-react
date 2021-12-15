@@ -9,14 +9,14 @@ class Fruit extends React.Component {
   }
 
   TextStore(event) {
-    console.log(event.target.value);
-    this.setState({ text: event.target.value });
+    this.state.NameOfFruit = event.target.value;
   }
+
   ClickButton() {
-    const inp = document.getElementById("inputIdFruit");
     this.state.arrayOfFruit.push(inp.value);
     this.setState({ NameOfFruit: inp.value });
   }
+  
   render() {
     return (
       <div className="addVegStyle">
@@ -24,7 +24,7 @@ class Fruit extends React.Component {
           THIS COMPONENT IS TO BE USED TO ADD <strong>FRUIT</strong> TO THE
           STORE
         </h1>
-        <input id="inputIdFruit" />
+        <input type="text" onChange={this.TextStore} />
         <button onClick={this.ClickButton}>Click Here</button>
         <p>{this.state.NameOfFruit}</p>
         <ul>

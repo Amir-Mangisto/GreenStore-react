@@ -9,11 +9,9 @@ class Addveg extends React.Component {
   }
 
   TextStore(event) {
-    console.log(event.target.value);
-    this.setState({ text: event.target.value });
+    this.state.NameOfVeg = event.target.value;
   }
   ClickButton() {
-    const inp = document.getElementById("inputId");
     this.state.arrayOfVeg.push(inp.value);
     this.setState({ NameOfVeg: inp.value });
   }
@@ -25,7 +23,7 @@ class Addveg extends React.Component {
           STORE
         </h1>
 
-        <input id="inputId" />
+        <input type="text" onChange={this.TextStore} />
         <button onClick={this.ClickButton}>Click Here</button>
         <p>{this.state.NameOfVeg}</p>
         <ul>
