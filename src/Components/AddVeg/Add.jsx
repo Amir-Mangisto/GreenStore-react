@@ -1,6 +1,5 @@
 import React from "react";
 
-
 class Addveg extends React.Component {
   constructor(props) {
     super(props);
@@ -15,14 +14,17 @@ class Addveg extends React.Component {
   }
   ClickButton() {
     const inp = document.getElementById("inputId");
-    this.setState({ NameOfVeg: inp.value });
     this.state.arrayOfVeg.push(inp.value);
     inp.value = " ";
+    this.setState({ NameOfVeg: inp.value });
   }
   render() {
     return (
       <div className="addVegStyle">
-        <h1>THIS COMPONENT IS TO BE USED TO ADD <strong>VEGETABLE</strong> TO THE STORE</h1>
+        <h1>
+          THIS COMPONENT IS TO BE USED TO ADD <strong>VEGETABLE</strong> TO THE
+          STORE
+        </h1>
 
         <input id="inputId" />
         <button onClick={this.ClickButton}>Click Here</button>

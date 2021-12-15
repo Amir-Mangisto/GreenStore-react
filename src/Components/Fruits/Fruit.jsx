@@ -14,22 +14,25 @@ class Fruit extends React.Component {
   }
   ClickButton() {
     const inp = document.getElementById("inputIdFruit");
-    this.setState({ NameOfFruit: inp.value });
     this.state.arrayOfFruit.push(inp.value);
     inp.value = " ";
+    this.setState({ NameOfFruit: inp.value });
   }
   render() {
     return (
       <div className="addVegStyle">
-        <h1>THIS COMPONENT IS TO BE USED TO ADD <strong>FRUIT</strong> TO THE STORE</h1>
-        <input id="inputIdFruit"/>
+        <h1>
+          THIS COMPONENT IS TO BE USED TO ADD <strong>FRUIT</strong> TO THE
+          STORE
+        </h1>
+        <input id="inputIdFruit" />
         <button onClick={this.ClickButton}>Click Here</button>
         <p>{this.state.NameOfFruit}</p>
         <ul>
           {this.state.arrayOfFruit.map((veg) => {
             return <li>{veg}</li>;
           })}
-          </ul>
+        </ul>
       </div>
     );
   }

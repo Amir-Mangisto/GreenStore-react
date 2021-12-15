@@ -14,14 +14,17 @@ class Can extends React.Component {
   }
   ClickButton() {
     const inp = document.getElementById("inputIdCan");
-    this.setState({ NameOfCan: inp.value });
     this.state.arrayOfCans.push(inp.value);
     inp.value = " ";
+    this.setState({ NameOfCan: inp.value });
   }
   render() {
     return (
       <div className="addVegStyle">
-        <h1>THIS COMPONENT IS TO BE USED TO ADD <strong>SPICE</strong> TO THE STORE</h1>
+        <h1>
+          THIS COMPONENT IS TO BE USED TO ADD <strong>SPICE</strong> TO THE
+          STORE
+        </h1>
         <input id="inputIdCan" />
         <button onClick={this.ClickButton}>Click Here</button>
         <p>{this.state.NameOfCan}</p>

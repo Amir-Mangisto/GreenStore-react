@@ -14,14 +14,17 @@ class Spice extends React.Component {
   }
   ClickButton() {
     const inp = document.getElementById("inputIddd");
-    this.setState({ NameOfSpice: inp.value });
     this.state.arrayOfSpice.push(inp.value);
     inp.value = " ";
+    this.setState({ NameOfSpice: inp.value });
   }
   render() {
     return (
       <div className="addVegStyle">
-        <h1>THIS COMPONENT IS TO BE USED TO ADD <strong>SPICE</strong> TO THE STORE</h1>
+        <h1>
+          THIS COMPONENT IS TO BE USED TO ADD <strong>SPICE</strong> TO THE
+          STORE
+        </h1>
         <input id="inputIddd" />
         <button onClick={this.ClickButton}>Click Here</button>
         <p>{this.state.NameOfSpice}</p>
