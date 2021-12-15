@@ -12,8 +12,8 @@ class Addveg extends React.Component {
     this.state.NameOfVeg = event.target.value;
   }
   ClickButton() {
-    this.state.arrayOfVeg.push(inp.value);
-    this.setState({ NameOfVeg: inp.value });
+    this.state.arrayOfVeg.push(this.state.NameOfVeg);
+    this.setState({ NameOfVeg: this.state.NameOfVeg });
   }
   render() {
     return (

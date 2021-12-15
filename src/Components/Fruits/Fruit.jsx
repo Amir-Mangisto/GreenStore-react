@@ -13,10 +13,10 @@ class Fruit extends React.Component {
   }
 
   ClickButton() {
-    this.state.arrayOfFruit.push(inp.value);
-    this.setState({ NameOfFruit: inp.value });
+    this.state.arrayOfFruit.push(this.state.NameOfFruit);
+    this.setState({ NameOfFruit: this.state.NameOfFruit });
   }
-  
+
   render() {
     return (
       <div className="addVegStyle">

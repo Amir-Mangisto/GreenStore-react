@@ -12,8 +12,8 @@ class Can extends React.Component {
     this.state.NameOfCan = event.target.value;
   }
   ClickButton() {
-    this.state.arrayOfCans.push(inp.value);
-    this.setState({ NameOfCan: inp.value });
+    this.state.arrayOfCans.push(this.state.NameOfCan);
+    this.setState({ NameOfCan: this.state.NameOfCan });
   }
   render() {
     return (

@@ -13,8 +13,8 @@ class Spice extends React.Component {
 
   }
   ClickButton() {
-    this.state.arrayOfSpice.push(inp.value);
-    this.setState({ NameOfSpice: inp.value });
+    this.state.arrayOfSpice.push(this.state.NameOfSpice);
+    this.setState({ NameOfSpice: this.state.NameOfSpice });
   }
   render() {
     return (
